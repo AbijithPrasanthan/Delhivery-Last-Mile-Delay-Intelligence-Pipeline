@@ -114,3 +114,10 @@ final.to_csv('outputs/part_a_delay_by_group.csv', index=False)
 model_df = pd.read_csv('data/modelling_table.csv')
 corr_matrix = model_df.select_dtypes(include='number').corr()
 corr_matrix.to_csv('outputs/part_a_correlations.csv')
+
+plt.figure(figsize=(6, 4))
+sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", fmt=".2f", vmin=-1, vmax=1)
+
+# 4. Display the plot
+plt.title("Correlation Matrix Heatmap")
+plt.show()
