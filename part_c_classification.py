@@ -280,7 +280,7 @@ pd.DataFrame({
     'selector_k': [7],
     'n_estimators': [100],
     'max_depth': ['unlimited'],
-    'min_samples_leaf': [1],
+    'min_sample_leaf': [1],
     'threshold': [best_threshold],
     'chosen_from': ['default_forest_same_7_features']
 }).to_csv('outputs/part_c_final_config.csv', index=False)
